@@ -8,7 +8,8 @@ class RepositoryListItem extends React.Component {
   }
 
   componentDidMount() {
-    fetchRepository('facebook/react').then( repository => {
+    fetchRepository(this.props.repositoryName)
+    .then( repository => {
       this.setState({
         repository: repository
       })
